@@ -15,14 +15,10 @@ function response(){
     botChat.innerHTML = greetingList[greeting] + " " + userInput.value;
     setTimeout(() => {botChat.innerHTML = "What is your favourite color?" }, 2000);;
     userInput.value = null;
+    submit.addEventListener("click", colour);
     } 
-    while (botChat.textContent == "What is your name?")
-    botChat.innerHTML = yornqList[basciquestions]
 
-    yornqList = [
-    "Did you know that Warlocks have a proficiencies in light armor?", 
-    "Did you know that Warlocks have Wisdom and Charisma saving throws?"]
-    basciquestions = Math.floor(Math.random() * yornqList.length);
+    function colour () {
 
     while(botChat.textContent == "What is your favourite color?"){
        if (userInput.value == "green", "Green") {
