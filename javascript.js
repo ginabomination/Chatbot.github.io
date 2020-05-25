@@ -31,4 +31,4 @@ function response(){
 	userInput.value = null;
         }
     }
-}
+
