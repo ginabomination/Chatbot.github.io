@@ -2,12 +2,18 @@ const userInput = document.querySelector("#userInput");
 const submit = document.querySelector("#submit");
 const botChat = document.querySelector("#botChat");
 const user = document.querySelector("#user");
+const beyond = document.querySelector("#beyond");
 const greetingList = ["Hello", "Hi", "Hey there", "Yo"];
 const greeting = Math.floor(Math.random() * greetingList.length); 
 
 alert("Dear user, please refrain from using capital letters. To answer a question use y or n. Thank you") // pop up
 
 submit.addEventListener("click", response); // button clicking
+
+beyond.addEventListener("click", Beyond);
+
+function Beyond (){
+window.open("https://www.dndbeyond.com/")}
 
 window.onload = function question () {
     botChat.textContent = "What is your name?"
