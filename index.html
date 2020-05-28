@@ -12,8 +12,8 @@
         <section>
         <nav>
         <ul>
-        <button1 id="hideelement">Hide</button>
-        <button1 id="showelement">Show</button>
+        <button id="hideelement">Hide</button>
+        <button id="showelement">Show</button>
         </ul>
         </nav>
         </section>
@@ -26,93 +26,58 @@
 
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">   
-        <style>                
-                h1 {
-                background-color: #420000;
-                padding: 30px;
-                text-align: center;
-                font-size: 40px;  
-                font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-                color: #ffffd7;
-                }
+        <style>
 
-                p {
-                font-size: 24px;
-                color: #ffffd7;
-                background-color: #420000;
-                }
+        button {
+        padding: 15px 25px;
+        font-size: 24px;
+        text-align: center;
+        cursor: pointer;
+        outline: none;
+        color: #fff;
+        background-color: #333300;
+        border: none;
+        border-radius: 15px;
+        box-shadow: 0 5px #999999;        }
+    
+        button:hover {background-color: #535300}
+    
+        button:active {
+        background-color:#ffffd7;
+        color: #171700;
+        box-shadow: 0 2px #bfbfbf52;
+        transform: translateY(4px);
+        }
+        body {
+        height: 100%;
+        background-color: #420000
+        }
+    
+        input {
+        border-radius: 15px;
+        background-position: left top;
+        background-repeat: repeat;
+        padding: 15px 25px;
+        width: 200px;
+        height: 20px;
+        font-size: 24px;
+        }
 
-                /* Create two columns/boxes that floats next to each other */
-                nav {
-                  float: left;
-                  width: 30%;
-                  background: #420000;
-                  padding: 20px;
-                }
-                
-                /* Style the list inside the menu */
-                nav ul {
-                  list-style-type: none;
-                  padding: 0;
-                }
-                
-                /* Clear floats after the columns */
-                section:after {
-                  content: "";
-                  display: table;
-                  clear: both;
-                }
-                
-                /* Style the footer */
-                footer {
-                  background-color: #420000;
-                  padding: 10px;
-                  text-align: center;
-                  color: white;
-                }
-                button {
-                padding: 15px 25px;
-                font-size: 24px;
-                text-align: center;
-                cursor: pointer;
-                outline: none;
-                color: #fff;
-                background-color: #333300;
-                border: none;
-                border-radius: 15px;
-                box-shadow: 0 5px #999999;
-                }
-    
-                button:hover {background-color: #535300}
-    
-                button:active {
-                background-color:#ffffd7;
-                color: #171700;
-                box-shadow: 0 2px #bfbfbf52;
-                transform: translateY(4px);
-                }
-                button1 {
-                padding: 15px 25px;
-                font-size: 24px;
-                text-align: center;
-                cursor: pointer;
-                outline: none;
-                color: #fff;
-                background-color: #333300;
-                border: none;
-                border-radius: 15px;
-                box-shadow: 0 5px #999999;
-                }
-    
-                button1:hover {background-color: #535300}
-    
-                button1:active {
-                background-color:#ffffd7;
-                color: #171700;
-                box-shadow: 0 2px #bfbfbf52;
-                transform: translateY(4px);
-                }
-                </style>
+        p {
+        font-size: 24px;
+        color: #ffffd7;
+        }
 
+        p2 {
+        font-size: 24px;
+        color: #ffffd7;
+        }
+
+        h1{
+        font-size: 40px;  
+        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        color: #ffffd7;
+        }
+        </style>
 	</body>  
 </html> 
