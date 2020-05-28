@@ -16,11 +16,7 @@ hideelement.addEventListener("click", hideElement);
 showelement.addEventListener("click", showElement);
 
 function showElement (){
-  if (showelement.style.display === "none") {
-    showelement.style.display = "block";
-  } else {
-    showelement.style.display = "none";
-  }}
+    document.getElementById("user").style.display = "block";}
 
 function hideElement(){
     document.getElementById("user").style.display = "none";}

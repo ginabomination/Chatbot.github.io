@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>  
-<html>
+<html lang = en>
 	<head>
 		<title>WarlockBot</title>
 		<link rel="stylesheet" type= "text/css" href="chatbot.css">
@@ -8,12 +8,111 @@
         <h1>WarlockBot</h1>
         <p id="botChat"></p>
         <h1 id="user">{Name}</h1> 
-        <button id="hideelement">Hide</button>
-        <button id="showelement">Show</button>
+        
+        <section>
+        <nav>
+        <ul>
+        <button1 id="hideelement">Hide</button>
+        <button1 id="showelement">Show</button>
+        </ul>
+        </nav>
+        </section>
+
         <input type="text" id="userInput">
         <button id="submit">Submit</button>
         <p2>Click on these links to be brought to correlating websites.</p2>
         <button id="beyond">D&D Beyond</button>
         <script src="javascript.js"></script>
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">   
+        <style>                
+                h1 {
+                background-color: #420000;
+                padding: 30px;
+                text-align: center;
+                font-size: 40px;  
+                font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                color: #ffffd7;
+                }
+
+                p {
+                font-size: 24px;
+                color: #ffffd7;
+                background-color: #420000;
+                }
+
+                /* Create two columns/boxes that floats next to each other */
+                nav {
+                  float: left;
+                  width: 30%;
+                  background: #420000;
+                  padding: 20px;
+                }
+                
+                /* Style the list inside the menu */
+                nav ul {
+                  list-style-type: none;
+                  padding: 0;
+                }
+                
+                /* Clear floats after the columns */
+                section:after {
+                  content: "";
+                  display: table;
+                  clear: both;
+                }
+                
+                /* Style the footer */
+                footer {
+                  background-color: #420000;
+                  padding: 10px;
+                  text-align: center;
+                  color: white;
+                }
+                button {
+                padding: 15px 25px;
+                font-size: 24px;
+                text-align: center;
+                cursor: pointer;
+                outline: none;
+                color: #fff;
+                background-color: #333300;
+                border: none;
+                border-radius: 15px;
+                box-shadow: 0 5px #999999;
+                }
+    
+                button:hover {background-color: #535300}
+    
+                button:active {
+                background-color:#ffffd7;
+                color: #171700;
+                box-shadow: 0 2px #bfbfbf52;
+                transform: translateY(4px);
+                }
+                button1 {
+                padding: 15px 25px;
+                font-size: 24px;
+                text-align: center;
+                cursor: pointer;
+                outline: none;
+                color: #fff;
+                background-color: #333300;
+                border: none;
+                border-radius: 15px;
+                box-shadow: 0 5px #999999;
+                }
+    
+                button1:hover {background-color: #535300}
+    
+                button1:active {
+                background-color:#ffffd7;
+                color: #171700;
+                box-shadow: 0 2px #bfbfbf52;
+                transform: translateY(4px);
+                }
+                </style>
+
 	</body>  
 </html> 
