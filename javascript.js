@@ -1,5 +1,5 @@
 const userInput = document.querySelector("#userInput");
-const submit = document.querySelector("#submit");
+var submit = document.querySelector("#submit");
 const botChat = document.querySelector("#botChat");
 const user = document.querySelector("#user");
 const beyond = document.querySelector("#beyond");
@@ -13,7 +13,7 @@ submit.addEventListener("click", response); // button clicking
 beyond.addEventListener("click", Beyond);
 
 function Beyond (){
-window.open("https://www.dndbeyond.com/")}
+window.open("https://www.dndbeyond.com/classes/warlock")}
 
 window.onload = function question () {
     botChat.textContent = "What is your name?"
@@ -31,21 +31,21 @@ userInput.addEventListener("keyup", function(event) {
             user.style.color = "red";
             botChat.innerHTML = greetingList[greeting] + " " + userInput.value;
             user.innerHTML = userInput.value;
-            setTimeout(() => {botChat.innerHTML = "Do you like chocolate? Y or N" }, 2000);;
+            setTimeout(() => {botChat.innerHTML = "Did you know warlock spell attack modifiers are their proficiency bonus and their Charisma modifier?" }, 2000);;
             userInput.value = null;
         } 
         
-        while(botChat.textContent == "Do you like chocolate? Y or N") {
+        while(botChat.textContent == "Did you know warlock spell attack modifiers are their proficiency bonus and their Charisma modifier?") {
             user.style.color = "blue";
-            if (userInput.value == "Y") {
+            if (userInput.value == "y") {
                 botChat.innerHTML = "Excellent!";
             }
-            else if (userInput.value == "N") {
+            else if (userInput.value == "n") {
                 botChat.textContent = "Pity";
             }
             else {
-                botChat.textContent = "Please type Y or N.";
-                setTimeout(() => {botChat.innerHTML = "Do you like chocolate? Y or N" }, 2000);;
+                botChat.textContent = "Please type y or n.";
+                setTimeout(() => {botChat.innerHTML = "Did you know warlock spell attack modifiers are their proficiency bonus and their Charisma modifier?" }, 2000);;
             }
             setTimeout(() => {botChat.innerHTML = "Did you know warlocks have wisdom and charisma saving throws?" }, 2000);;
             userInput.value = null;}
@@ -61,3 +61,7 @@ userInput.addEventListener("keyup", function(event) {
         botChat.textContent = "Please type y or n.";
         setTimeout(() => {botChat.innerHTML = "Did you know warlocks have wisdom and charisma saving throws?" }, 2000);;
         submit.addEventListener("click", colour);}}}
+
+        function colour(){
+            botChat.innerHTML = "hello"
+        }
