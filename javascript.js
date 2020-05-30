@@ -3,8 +3,7 @@ var submit = document.querySelector("#submit");
 const botChat = document.querySelector("#botChat");
 const user = document.querySelector("#user");
 const beyond = document.querySelector("#beyond");
-const hideelement = document.querySelector("#hideelement");
-const showelement = document.querySelector("#showelement");
+const hideandshow = document.querySelector("#showelement");
 const greetingList = ["Hello", "Hi", "Hey there", "Yo"];
 const greeting = Math.floor(Math.random() * greetingList.length); 
 
@@ -12,11 +11,15 @@ alert("Dear user, please refrain from using capital letters. To answer a questio
 
 submit.addEventListener("click", response); // button clicking
 beyond.addEventListener("click", Beyond);
-hideelement.addEventListener("click", hideElement);
-showelement.addEventListener("click", showElement);
+hideandshow.addEventListener("click", showElement);
 
-function showElement (){
-    document.getElementById("user").style.display = "block";}
+    function showElement (){
+        if (user.style.display === "none") {
+            user.style.display = "block";
+        } else {
+            user.style.display = "none";
+        }
+      }
 
 function hideElement(){
     document.getElementById("user").style.display = "none";}
@@ -62,14 +65,15 @@ userInput.addEventListener("keyup", function(event) {
         while(botChat.textContent == "Did you know warlocks have wisdom and charisma saving throws?") {
         if (userInput.value == "y") {
         botChat.innerHTML = "Excellent! well done";
+        submit.addEventListener("click", colour)
         }
         else if (userInput.value == "n") {
         botChat.textContent = "Better remeber that when playing as a warlock.";
+        submit.addEventListener("click", colour)
         }
         else {
         botChat.textContent = "Please type y or n.";
-        setTimeout(() => {botChat.innerHTML = "Did you know warlocks have wisdom and charisma saving throws?" }, 2000);;
-        submit.addEventListener("click", colour);}}}
+        setTimeout(() => {botChat.innerHTML = "Did you know warlocks have wisdom and charisma saving throws?" }, 2000);;;}}}
 
         function colour(){
             botChat.innerHTML = "hello"

@@ -7,20 +7,23 @@
 	<body>
         <h1>WarlockBot</h1>
         <p id="botChat"></p>
-        <h1 id="user">{Name}</h1> 
-        
-        <section>
-        <nav>
-        <ul>
-        <button id="hideelement">Hide</button>
-        <button id="showelement">Show</button>
-        </ul>
-        </nav>
-        </section>
 
+        <section>
+        <h1 id="user">{Name}</h1> 
+        <button1 id="showelement">Show/Hide</button>
+        </section>
+        <p>       
+
+        </p>
         <input type="text" id="userInput">
         <button id="submit">Submit</button>
+        <p>       
+
+        </p>
         <p2>Click on these links to be brought to correlating websites.</p2>
+        <p>       
+
+        </p>
         <button id="beyond">D&D Beyond</button>
         <script src="javascript.js"></script>
 
@@ -48,6 +51,20 @@
         box-shadow: 0 2px #bfbfbf52;
         transform: translateY(4px);
         }
+
+        button1 {
+        padding: 8px 8px;
+        font-size: 14px;
+        text-align: center;
+        cursor: pointer;
+        outline:#333300;
+        color: #fff;
+        border:#333300;}  
+    
+        button1:hover {
+        background-color: #535300;
+        border-radius: 10px;}
+
         body {
         height: 100%;
         background-color: #420000
@@ -55,7 +72,7 @@
     
         input {
         border-radius: 15px;
-        background-position: left top;
+        background-position: center bottom;
         background-repeat: repeat;
         padding: 15px 25px;
         width: 200px;
