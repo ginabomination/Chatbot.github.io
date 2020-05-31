@@ -6,12 +6,17 @@ const beyond = document.querySelector("#beyond");
 const hideandshow = document.querySelector("#showelement");
 const greetingList = ["Hello", "Hi", "Hey there", "Yo"];
 const greeting = Math.floor(Math.random() * greetingList.length); 
+const colourList = ["red", "orange", "yellow", "green", "blue", "purple",];
+var color = Math.floor(Math.random() * colourList.length); 
+const colourbutton = document.querySelector("#colour");
 
 alert("Dear user, please refrain from using capital letters. To answer a question use y or n. Thank you") // pop up
 
 submit.addEventListener("click", response); // button clicking
 beyond.addEventListener("click", Beyond);
 hideandshow.addEventListener("click", showElement);
+beyond.addEventListener("click", colour);
+
 
     function showElement (){
         if (user.style.display === "none") {
@@ -21,8 +26,8 @@ hideandshow.addEventListener("click", showElement);
         }
       }
 
-function hideElement(){
-    document.getElementById("user").style.display = "none";}
+colourbutton.addEventListener("click", colour));
+function colour() {user.style.color = colourList[color];}
 
 function Beyond (){
 window.open("https://www.dndbeyond.com/classes/warlock")}
@@ -40,7 +45,7 @@ userInput.addEventListener("keyup", function(event) {
 
     function response() {
         while(botChat.textContent == "What is your name?") {
-            user.style.color = "red";
+            user.style.color = colourList[color];
             botChat.innerHTML = greetingList[greeting] + " " + userInput.value;
             user.innerHTML = userInput.value;
             setTimeout(() => {botChat.innerHTML = "Did you know warlock spell attack modifiers are their proficiency bonus and their Charisma modifier?" }, 2000);;
@@ -48,7 +53,7 @@ userInput.addEventListener("keyup", function(event) {
         } 
         
         while(botChat.textContent == "Did you know warlock spell attack modifiers are their proficiency bonus and their Charisma modifier?") {
-            user.style.color = "blue";
+            user.style.color = colourList[color];
             if (userInput.value == "y") {
                 botChat.innerHTML = "Excellent!";
             }
@@ -65,16 +70,17 @@ userInput.addEventListener("keyup", function(event) {
         while(botChat.textContent == "Did you know warlocks have wisdom and charisma saving throws?") {
         if (userInput.value == "y") {
         botChat.innerHTML = "Excellent! well done";
-        submit.addEventListener("click", colour)
-        }
+        userInput.value = null;}
+    
         else if (userInput.value == "n") {
         botChat.textContent = "Better remeber that when playing as a warlock.";
-        submit.addEventListener("click", colour)
-        }
+        userInput.value = null;}
+
         else {
         botChat.textContent = "Please type y or n.";
-        setTimeout(() => {botChat.innerHTML = "Did you know warlocks have wisdom and charisma saving throws?" }, 2000);;;}}}
+        setTimeout(() => {botChat.innerHTML = "Did you know warlocks have wisdom and charisma saving throws?" }, 2000);;;}}
+        userInput.value = null;}
 
-        function colour(){
-            botChat.innerHTML = "hello"
-        }
+
+    botChat.innerHTML = "If you have any queries please enter a keyword. "
+        
