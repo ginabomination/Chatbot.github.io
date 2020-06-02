@@ -7,10 +7,10 @@ const hideandshow = document.querySelector("#showelement");
 const greetingList = ["Hello", "Hi", "Hey there", "Yo"];
 const greeting = Math.floor(Math.random() * greetingList.length); 
 const colourList = ["red", "orange", "yellow", "green", "blue", "purple",];
-var color = Math.floor(Math.random() * colourList.length); 
+const color = Math.floor(Math.random() * colourList.length); 
 const colourbutton = document.querySelector("#colour");
 
-alert("Dear user, please refrain from using capital letters. To answer a question use y or n. Thank you") // pop up
+alert("Dear user, please refrain from using capital letters. To answer a question use y or n. Toadd a splash of colour  your name click the colour button. Thank you") // pop up
 
 submit.addEventListener("click", response); // button clicking
 beyond.addEventListener("click", Beyond);
@@ -25,16 +25,22 @@ beyond.addEventListener("click", colour);
             user.style.display = "none";
         }
       }
-
-colourbutton.addEventListener("click", colour));
-function colour() {user.style.color = colourList[color];}
-
 function Beyond (){
 window.open("https://www.dndbeyond.com/classes/warlock")}
 
 window.onload = function question () {
     botChat.textContent = "What is your name?"
 }
+
+colourbutton.addEventListener("click", colour);
+    function colour (){
+        if (user.style.color === "none") {
+            user.style.color = colourList[color];
+        } else {
+            user.style.color = null;
+            user.style.color = colourList[color];
+        }
+      }
 
 userInput.addEventListener("keyup", function(event) {
     if (event.keyCode === 13) {
@@ -45,7 +51,6 @@ userInput.addEventListener("keyup", function(event) {
 
     function response() {
         while(botChat.textContent == "What is your name?") {
-            user.style.color = colourList[color];
             botChat.innerHTML = greetingList[greeting] + " " + userInput.value;
             user.innerHTML = userInput.value;
             setTimeout(() => {botChat.innerHTML = "Did you know warlock spell attack modifiers are their proficiency bonus and their Charisma modifier?" }, 2000);;
@@ -53,7 +58,6 @@ userInput.addEventListener("keyup", function(event) {
         } 
         
         while(botChat.textContent == "Did you know warlock spell attack modifiers are their proficiency bonus and their Charisma modifier?") {
-            user.style.color = colourList[color];
             if (userInput.value == "y") {
                 botChat.innerHTML = "Excellent!";
             }
@@ -81,6 +85,8 @@ userInput.addEventListener("keyup", function(event) {
         setTimeout(() => {botChat.innerHTML = "Did you know warlocks have wisdom and charisma saving throws?" }, 2000);;;}}
         userInput.value = null;}
 
+        setTimeout (function() {ask();}, 1000) // one second 
+        function ask () {
 
-    botChat.innerHTML = "If you have any queries please enter a keyword. "
+        botChat.innerHTML = "If you have any queries please enter a keyword. "}
         
