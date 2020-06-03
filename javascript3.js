@@ -79,6 +79,7 @@ function response() {
     
         else if (userInput.value == "n") {
         botChat.textContent = "Better now then never.";
+        setTimeout (function next () {botChat.textContent= "hello"}, 2000);
         userInput.value = null;}
       
         else {
