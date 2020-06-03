@@ -49,7 +49,7 @@ userInput.addEventListener("keyup", function(event) {
     }
   }); // enter keycode - works as of 28/5
 
-    function response() {
+function response() {
         while(botChat.textContent == "What is your name?") {
             botChat.innerHTML = greetingList[greeting] + " " + userInput.value;
             user.innerHTML = userInput.value;
@@ -74,19 +74,16 @@ userInput.addEventListener("keyup", function(event) {
         while(botChat.textContent == "Did you know warlocks have wisdom and charisma saving throws?") {
         if (userInput.value == "y") {
         botChat.innerHTML = "Excellent! well done";
+        setTimeout (function next () {botChat.textContent= "hello"}, 2000);
         userInput.value = null;}
     
         else if (userInput.value == "n") {
-        botChat.textContent = "Better remeber that when playing as a warlock.";
+        botChat.textContent = "Better now then never.";
         userInput.value = null;}
-
+      
         else {
         botChat.textContent = "Please type y or n.";
         setTimeout(() => {botChat.innerHTML = "Did you know warlocks have wisdom and charisma saving throws?" }, 2000);;;}}
         userInput.value = null;}
 
-        setTimeout (function() {ask();}, 1000) // one second 
-        function ask () {
-
-        botChat.innerHTML = "If you have any queries please enter a keyword. "}
-        
+        function next (){botChat.textContent = "hello"}
