@@ -75,12 +75,12 @@ function response() {
         while(botChat.textContent == "Did you know warlocks have wisdom and charisma saving throws?") {
         if (userInput.value == "y") {
         botChat.innerHTML = "Excellent! well done";
-        setTimeout (function next () {botChat.textContent= "Enter a keyword for the information you seek dear traveller."}, 2000);
+        setTimeout (function next () {botChat.textContent= " "}, 2000);
         userInput.value = null;}
     
         else if (userInput.value == "n") {
         botChat.textContent = "Better now then never.";
-        setTimeout (function next () {botChat.textContent= "Enter a keyword for the information you seek dear traveller."}, 2000);
+        setTimeout (function next () {botChat.textContent= " "}, 2000);
         userInput.value = null;}
       
         else {
@@ -88,7 +88,10 @@ function response() {
         setTimeout(() => {botChat.innerHTML = "Did you know warlocks have wisdom and charisma saving throws?" }, 2000);;;}}
         userInput.value = null;}
 
-        function next (){
-        skip.remove();    
-        botChat.textContent = "Enter a keyword for the information you seek dear traveller.";
-    }
+function next (){
+skip.remove();    
+botChat.innerHTML = "Enter a keyword for the information you seek dear traveller.";
+while(botChat.textContent == "Enter a keyword for the information you seek dear traveller.") {
+if (userInput.value == "profiency", "pro") {
+    botChat.innerHTML = "Armor: Light armor." + " " + "Weapons: Simple weapons." + " " + "Tools: None." + " " + "Saving Throws: Wisdom, Charisma." + " " + "Skills: Choose two skills from Arcana, Deception, History, Intimidation, Investigation, Nature, and Religion.";
+    userInput.value = null;}}}
