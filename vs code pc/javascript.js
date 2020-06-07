@@ -3,6 +3,7 @@ var submit = document.querySelector("#submit");
 const botChat = document.querySelector("#botChat");
 const user = document.querySelector("#user");
 const beyond = document.querySelector("#beyond");
+const skip = document.querySelector("#skip");
 const hideandshow = document.querySelector("#showelement");
 const greetingList = ["Hello", "Hi", "Hey there", "Yo"];
 const greeting = Math.floor(Math.random() * greetingList.length); 
@@ -15,7 +16,7 @@ alert("Dear user, please refrain from using capital letters. To answer a questio
 submit.addEventListener("click", response); // button clicking
 beyond.addEventListener("click", Beyond);
 hideandshow.addEventListener("click", showElement);
-beyond.addEventListener("click", colour);
+skip.addEventListener("click", next);
 
 
     function showElement (){
@@ -87,4 +88,5 @@ function response() {
         setTimeout(() => {botChat.innerHTML = "Did you know warlocks have wisdom and charisma saving throws?" }, 2000);;;}}
         userInput.value = null;}
 
-        function next (){botChat.textContent = "hello"}
+        function next (){
+        botChat.textContent = "hello"}

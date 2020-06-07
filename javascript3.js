@@ -3,6 +3,7 @@ var submit = document.querySelector("#submit");
 const botChat = document.querySelector("#botChat");
 const user = document.querySelector("#user");
 const beyond = document.querySelector("#beyond");
+const skip = document.querySelector("#skip");
 const hideandshow = document.querySelector("#showelement");
 const greetingList = ["Hello", "Hi", "Hey there", "Yo"];
 const greeting = Math.floor(Math.random() * greetingList.length); 
@@ -10,12 +11,12 @@ const colourList = ["red", "orange", "yellow", "green", "blue", "purple",];
 const color = Math.floor(Math.random() * colourList.length); 
 const colourbutton = document.querySelector("#colour");
 
-alert("Dear user, please refrain from using capital letters. To answer a question use y or n. Toadd a splash of colour  your name click the colour button. Thank you") // pop up
+alert("Dear user, please refrain from using capital letters. To answer a question use y or n. To add a splash of colour  your name click the colour button and scroll up and down the page to change background. Thank you") // pop up
 
 submit.addEventListener("click", response); // button clicking
 beyond.addEventListener("click", Beyond);
 hideandshow.addEventListener("click", showElement);
-beyond.addEventListener("click", colour);
+skip.addEventListener("click", next);
 
 
     function showElement (){
@@ -74,12 +75,12 @@ function response() {
         while(botChat.textContent == "Did you know warlocks have wisdom and charisma saving throws?") {
         if (userInput.value == "y") {
         botChat.innerHTML = "Excellent! well done";
-        setTimeout (function next () {botChat.textContent= "hello"}, 2000);
+        setTimeout (function next () {botChat.textContent= "Enter a keyword for the information you seek dear traveller."}, 2000);
         userInput.value = null;}
     
         else if (userInput.value == "n") {
         botChat.textContent = "Better now then never.";
-        setTimeout (function next () {botChat.textContent= "hello"}, 2000);
+        setTimeout (function next () {botChat.textContent= "Enter a keyword for the information you seek dear traveller."}, 2000);
         userInput.value = null;}
       
         else {
@@ -87,4 +88,7 @@ function response() {
         setTimeout(() => {botChat.innerHTML = "Did you know warlocks have wisdom and charisma saving throws?" }, 2000);;;}}
         userInput.value = null;}
 
-        function next (){botChat.textContent = "hello"}
+        function next (){
+        skip.remove();    
+        botChat.textContent = "Enter a keyword for the information you seek dear traveller.";
+    }
