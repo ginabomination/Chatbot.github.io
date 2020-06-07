@@ -7,11 +7,8 @@ const skip = document.querySelector("#skip");
 const hideandshow = document.querySelector("#showelement");
 const greetingList = ["Hello", "Hi", "Hey there", "Yo"];
 const greeting = Math.floor(Math.random() * greetingList.length); 
-const colourList = ["red", "orange", "yellow", "green", "blue", "purple",];
-const color = Math.floor(Math.random() * colourList.length); 
-const colourbutton = document.querySelector("#colour");
 
-alert("Dear user, please refrain from using capital letters. To answer a question use y or n. To add a splash of colour  your name click the colour button and scroll up and down the page to change background. Thank you") // pop up
+alert("Dear user, please refrain from using capital letters. To answer a question use y or n. To add a splash of colour to your name tag click the colour button and scroll up and down the page to change background. Thank you") // pop up
 
 submit.addEventListener("click", response); // button clicking
 beyond.addEventListener("click", Beyond);
@@ -32,16 +29,6 @@ window.open("https://www.dndbeyond.com/classes/warlock")}
 window.onload = function question () {
     botChat.textContent = "What is your name?"
 }
-
-colourbutton.addEventListener("click", colour);
-    function colour (){
-        if (user.style.color === "none") {
-            user.style.color = colourList[color];
-        } else {
-            user.style.color = null;
-            user.style.color = colourList[color];
-        }
-      }
 
 userInput.addEventListener("keyup", function(event) {
     if (event.keyCode === 13) {
@@ -75,12 +62,12 @@ function response() {
         while(botChat.textContent == "Did you know warlocks have wisdom and charisma saving throws?") {
         if (userInput.value == "y") {
         botChat.innerHTML = "Excellent! well done";
-        setTimeout (function next () {botChat.textContent= " "}, 2000);
+        setTimeout (function next () {botChat.innerHTML= "Enter a keyword for the information you seek dear traveller."}, 2000);
         userInput.value = null;}
     
         else if (userInput.value == "n") {
         botChat.textContent = "Better now then never.";
-        setTimeout (function next () {botChat.textContent= " "}, 2000);
+        setTimeout (function next () {botChat.innerHTML= "Enter a keyword for the information you seek dear traveller."}, 2000);
         userInput.value = null;}
       
         else {
@@ -89,8 +76,8 @@ function response() {
         userInput.value = null;}
 
 function next (){
+botChat.textContent == "Enter a keyword for the information you seek dear traveller."
 skip.remove();    
-botChat.innerHTML = "Enter a keyword for the information you seek dear traveller.";
 while(botChat.textContent == "Enter a keyword for the information you seek dear traveller.") {
 if (userInput.value == "profiency", "pro") {
     botChat.innerHTML = "Armor: Light armor." + " " + "Weapons: Simple weapons." + " " + "Tools: None." + " " + "Saving Throws: Wisdom, Charisma." + " " + "Skills: Choose two skills from Arcana, Deception, History, Intimidation, Investigation, Nature, and Religion.";
