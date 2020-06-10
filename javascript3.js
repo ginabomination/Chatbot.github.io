@@ -41,11 +41,11 @@ function response() {
         while(botChat.textContent == "What is your name?") {
             botChat.innerHTML = greetingList[greeting] + " " + userInput.value;
             user.innerHTML = userInput.value;
-            setTimeout(() => {botChat.innerHTML = "Did you know warlock spell attack modifiers are their proficiency bonus and their Charisma modifier?" }, 2000);;
+            setTimeout(() => {botChat.innerHTML = "Did you know that warlocks can force a patron into a pact?" }, 2000);;
             userInput.value = null;
         } 
         
-        while(botChat.textContent == "Did you know warlock spell attack modifiers are their proficiency bonus and their Charisma modifier?") {
+        while(botChat.textContent == "Did you know that warlocks can force a patron into a pact?") {
             if (userInput.value == "y") {
                 botChat.innerHTML = "Excellent!";
             }
@@ -54,7 +54,7 @@ function response() {
             }
             else {
                 botChat.textContent = "Please type y or n.";
-                setTimeout(() => {botChat.innerHTML = "Did you know warlock spell attack modifiers are their proficiency bonus and their Charisma modifier?" }, 2000);;
+                setTimeout(() => {botChat.innerHTML = "Did you know that warlocks can force a patron into a pact?" }, 2000);;
             }
             setTimeout(() => {botChat.innerHTML = "Did you know warlocks have wisdom and charisma saving throws?" }, 2000);;
             userInput.value = null;}
