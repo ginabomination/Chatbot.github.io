@@ -16,7 +16,7 @@ hideandshow.addEventListener("click", showElement);
 skip.addEventListener("click", Skip);
 
  function Skip (){
-setTimeout (function(){next();}, 3000)
+setTimeout(() => {submit.addEventListener("click", next);}, 2000);;
 skip.remove();}
 
     function showElement (){
@@ -64,23 +64,22 @@ function response() {
 
         while(botChat.textContent == "Did you know warlocks have wisdom and charisma saving throws?") {
         if (userInput.value == "yes") {
-        botChat.innerHTML = "Excellent! well done";
-        setTimeout (function(){next();}, 3000)
+        botChat.innerHTML = "Excellent! well done.";
+        setTimeout(() => {botChat.innerHTML = "Click submit or enter to ask me me your queries traveller." }, 2000);;
+        setTimeout(() => {submit.addEventListener ("click", next) }, 2000);;
         userInput.value = null;}
     
         else if (userInput.value == "no") {
         botChat.textContent = "Better now then never.";
-        setTimeout (function(){next();}, 3000)
+        setTimeout(() => {botChat.innerHTML = "Click submit or enter to ask me me your queries traveller." }, 2000);;
+        setTimeout(() => {submit.addEventListener ("click", next) }, 2000);;
         userInput.value = null;}
       
         else {
         botChat.textContent = "Please type yes or no.";
-        setTimeout (function(){next();}, 3000)
-        userInput.value = null;}
+                setTimeout(() => {botChat.innerHTML = "Did you know warlocks have wisdom and charisma saving throws?" }, 2000);;
 
+        userInput.value = null;}
+        }}
 function next (){
-botChat.textContent == "Enter a keyword for the information you seek dear traveller."
-while(botChat.textContent == "Enter a keyword for the information you seek dear traveller.") {
-if (userInput.value == "profiency", "pro") {
-    botChat.innerHTML = "Armor: Light armor." + " " + "Weapons: Simple weapons." + " " + "Tools: None." + " " + "Saving Throws: Wisdom, Charisma." + " " + "Skills: Choose two skills from Arcana, Deception, History, Intimidation, Investigation, Nature, and Religion.";
-    userInput.value = null;}}}}}
+botChat.innerHTML = "hello";}
