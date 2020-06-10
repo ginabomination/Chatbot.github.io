@@ -13,8 +13,11 @@ alert("Dear user, please refrain from using capital letters. To answer a questio
 submit.addEventListener("click", response); // button clicking
 beyond.addEventListener("click", Beyond);
 hideandshow.addEventListener("click", showElement);
-skip.addEventListener("click", next);
+skip.addEventListener("click", Skip);
 
+ function Skip (){
+setTimeout (function(){next();}, 3000)
+skip.remove();}
 
     function showElement (){
         if (user.style.display === "none") {
@@ -46,39 +49,38 @@ function response() {
         } 
         
         while(botChat.textContent == "Did you know that warlocks can force a patron into a pact?") {
-            if (userInput.value == "y") {
+            if (userInput.value == "yes") {
                 botChat.innerHTML = "Excellent!";
             }
-            else if (userInput.value == "n") {
+            else if (userInput.value == "no") {
                 botChat.textContent = "Pity";
             }
             else {
-                botChat.textContent = "Please type y or n.";
+                botChat.textContent = "Please type yes or no.";
                 setTimeout(() => {botChat.innerHTML = "Did you know that warlocks can force a patron into a pact?" }, 2000);;
             }
             setTimeout(() => {botChat.innerHTML = "Did you know warlocks have wisdom and charisma saving throws?" }, 2000);;
             userInput.value = null;}
 
         while(botChat.textContent == "Did you know warlocks have wisdom and charisma saving throws?") {
-        if (userInput.value == "y") {
+        if (userInput.value == "yes") {
         botChat.innerHTML = "Excellent! well done";
-        setTimeout (function next () {botChat.innerHTML= "Enter a keyword for the information you seek dear traveller."}, 2000);
+        setTimeout (function(){next();}, 3000)
         userInput.value = null;}
     
-        else if (userInput.value == "n") {
+        else if (userInput.value == "no") {
         botChat.textContent = "Better now then never.";
-        setTimeout (function next () {botChat.innerHTML= "Enter a keyword for the information you seek dear traveller."}, 2000);
+        setTimeout (function(){next();}, 3000)
         userInput.value = null;}
       
         else {
-        botChat.textContent = "Please type y or n.";
-        setTimeout(() => {botChat.innerHTML = "Did you know warlocks have wisdom and charisma saving throws?" }, 2000);;;}}
+        botChat.textContent = "Please type yes or no.";
+        setTimeout (function(){next();}, 3000)
         userInput.value = null;}
 
 function next (){
 botChat.textContent == "Enter a keyword for the information you seek dear traveller."
-skip.remove();    
 while(botChat.textContent == "Enter a keyword for the information you seek dear traveller.") {
 if (userInput.value == "profiency", "pro") {
     botChat.innerHTML = "Armor: Light armor." + " " + "Weapons: Simple weapons." + " " + "Tools: None." + " " + "Saving Throws: Wisdom, Charisma." + " " + "Skills: Choose two skills from Arcana, Deception, History, Intimidation, Investigation, Nature, and Religion.";
-    userInput.value = null;}}}
+    userInput.value = null;}}}}}
