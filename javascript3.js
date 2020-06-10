@@ -82,4 +82,9 @@ function response() {
         userInput.value = null;}
         }}
 function next (){
-botChat.innerHTML = "hello";}
+botChat.innerHTML = "Enter a keyword for the information you seek dear traveller.";
+skip.remove();    
+while(botChat.textContent == "Enter a keyword for the information you seek dear traveller.") {
+if (userInput.value == "profiency", "pro") {
+    botChat.innerHTML = "Armor: Light armor." + " " + "Weapons: Simple weapons." + " " + "Tools: None." + " " + "Saving Throws: Wisdom, Charisma." + " " + "Skills: Choose two skills from Arcana, Deception, History, Intimidation, Investigation, Nature, and Religion.";
+    userInput.value = null;}}}
