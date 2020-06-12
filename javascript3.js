@@ -11,9 +11,6 @@ const userRoll = document.querySelector("#userRoll");
 const greetingList = ["Hello", "Hi", "Hey there", "Yo"];
 const greeting = Math.floor(Math.random() * greetingList.length); // array for hellos
 
-const d4 = ["1", "2", "3", "4"];
-const greeting = Math.floor(Math.random() * greetingList.length); // array for 4 sided die
-
 alert("Dear user, please refrain from using capital letters. To answer a question use y or n. Scroll up and down the page to change background. Thank you") // instructions for use
 
 submit.addEventListener("click", response); // submit button
@@ -21,21 +18,24 @@ beyond.addEventListener("click", Beyond); // button to open link to D&D Beyond
 hideandshow.addEventListener("click", showElement); // button to hide {Name}
 roll.addEventListener ("click", Roll)
 
+const d10 = ["1","2","3","4","5","6","7","8","9","10"];
+const randomd10 = d10[Math.floor(Math.random() * d10.length)];
+const d8 = ["1","2","3","4","5","6","7","8"];
+const randomd8 = d8[Math.floor(Math.random() * d8.length)];
+
 function Roll () {
-    while(rollNo.textContent == "Dice roller") {
-        if (userInput.value == "1d4+1", "1D4+1") {
-            botChat.innerHTML = "Excellent!"; // if user rolls a 4 sided die with a +1 modifer [1d4+1 is a term used in common rpg play]
-        }
-        else if (userInput.value == "no") {
-            botChat.textContent = "Pity"; // if the user says no
-        }
+    while(roll.textContent == "Roll") {
+        if (userRoll.value == "1d10", "1D10") {
+        rollNo.innerHTML = randomd10[d10]; 
+        setTimeout(() => {rollNo.innerHTML = "Dice roller" }, 2000);;}// if user rolls a 4 sided die with a +1 modifer [1d4+1 is a term used in common rpg play]
+
+    if (userRoll.value == "1d8", "1D8") {
+        rollNo.innerHTML = randomd8[d8]; 
+        setTimeout(() => {rollNo.innerHTML = "Dice roller" }, 2000);;}
+
         else {
-            botChat.textContent = "Please type yes or no.";
-            setTimeout(() => {botChat.innerHTML = "Did you know that warlocks can force a patron into a pact?" }, 2000);; // if the user enters a unknown response
-        }
-        setTimeout(() => {botChat.innerHTML = "Did you know warlocks have wisdom and charisma saving throws?" }, 2000);; // next question
-        userInput.value = null;} // cleans the user input
-}
+            botChat.textContent = "did not calculate. try again.";
+        setTimeout(() => {rollNo.innerHTML = "Dice roller" }, 2000);;}}}
 
     function showElement (){
         if (user.style.display === "none") {
