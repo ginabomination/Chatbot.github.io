@@ -4,12 +4,14 @@ const botChat = document.querySelector("#botChat");
 const user = document.querySelector("#user");
 const beyond = document.querySelector("#beyond");
 const hideandshow = document.querySelector("#showelement");
+const Roll = document.querySelector ("#roll")
 
 const greetingList = ["Hello", "Hi", "Hey there", "Yo"];
 const greeting = Math.floor(Math.random() * greetingList.length); // array for hellos
 
 alert("Dear user, please refrain from using capital letters. To answer a question use y or n. Scroll up and down the page to change background. Thank you") // instructions for use
 
+Roll.addEventListener("click", roll);
 submit.addEventListener("click", response); // submit button
 beyond.addEventListener("click", Beyond); // button to open link to D&D Beyond
 hideandshow.addEventListener("click", showElement); // button to hide {Name}
@@ -25,8 +27,9 @@ hideandshow.addEventListener("click", showElement); // button to hide {Name}
 function Beyond (){
 window.open("https://www.dndbeyond.com/classes/warlock")} // button to open link to D&D Beyond [my own work]
 
+
 window.onload = function question () {
-    botChat.textContent = "What is your name?" // means that this question is the first question to show when the page is opened
+botChat.textContent = "What is your name?" // means that this question is the first question to show when the page is opened
 }
 
 userInput.addEventListener("keyup", function(event) {
@@ -78,9 +81,21 @@ function response() {
         
         while(botChat.textContent == "Do you know any common patrons?") {
             if (userInput.value == "yes") {
-                botChat.innerHTML = "I would love to have tenticles if I had a patrom. Thank you for using my Chatbot.";
+                botChat.innerHTML = "I would love to have tenticles if I had a patrom. Thank you for using my Chatbot. Click Roll 1d4 to roll a 4 sided die.";
                 userInput.value = null;}
             
                 else if (userInput.value == "no") {
                 botChat.textContent = "I would love to have the lurker of the dept to be my patreon, I would love to have tenticles. Thank you for using my Chatbot.";
-                userInput.value = null;}}}
+                userInput.value = null;}
+            
+  
+}}
+    const d4 = [1,2,3,4];
+    const D4 = Math.floor(Math.random() * d4.length)
+    
+    var x = d4[D4]
+    var y = 4
+    var z = x * y
+    
+    function roll (){
+    botChat.innerHTML = z}}
