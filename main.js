@@ -26,6 +26,7 @@ function response() {
         while(botChat.textContent == "What is your name?") {
             botChat.innerHTML = greetingList[greeting] + " " + userInput.value;
             user.innerHTML = userInput.value;
+            var name = userInput.value;
             setTimeout(() => {botChat.innerHTML = "Have you achieve 80 credits?" }, 2000);;
             userInput.value = null; // says hello to the user and asks the 2nd question
         } 
@@ -64,7 +65,7 @@ function response() {
         
         while(botChat.textContent == "Have you applied to any universties?") {
             if (userInput.value == "yes") {
-                botChat.innerHTML = "Sweet as, Good luck " + userInput.value + ". Im rooting for you :)";
+                botChat.innerHTML = "Sweet as, Good luck " + name + ". Im rooting for you :)";
                 userInput.value = null;}
             
                 else if (userInput.value == "no") {
