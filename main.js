@@ -6,7 +6,7 @@ const user = document.querySelector("#user");
 const greetingList = ["Hello", "Hi", "Hey there", "Yo"];
 const greeting = Math.floor(Math.random() * greetingList.length); // array for hellos
 
-alert("Dear user, please refrain from using capital letters. To answer a question use y or n. Scroll up and down the page to change background. Thank you") // instructions for use
+alert("Dear user, please refrain from using capital letters. To answer a question use yes or no. Scroll up and down the page to change background. Thank you") // instructions for use
 
 submit.addEventListener("click", response); // submit button
 
@@ -26,11 +26,11 @@ function response() {
         while(botChat.textContent == "What is your name?") {
             botChat.innerHTML = greetingList[greeting] + " " + userInput.value;
             user.innerHTML = userInput.value;
-            setTimeout(() => {botChat.innerHTML = "Did you know that warlocks can force a patron into a pact?" }, 2000);;
+            setTimeout(() => {botChat.innerHTML = "Have you achieve 80 credits?" }, 2000);;
             userInput.value = null; // says hello to the user and asks the 2nd question
         } 
         
-        while(botChat.textContent == "Did you know that warlocks can force a patron into a pact?") {
+        while(botChat.textContent == "Have you achieve 80 credits?") {
             if (userInput.value == "yes") {
                 botChat.innerHTML = "Excellent!"; // response if the user says yes
             }
@@ -39,12 +39,12 @@ function response() {
             }
             else {
                 botChat.textContent = "Please type yes or no.";
-                setTimeout(() => {botChat.innerHTML = "Did you know that warlocks can force a patron into a pact?" }, 2000);; // if the user enters a unknown response
+                setTimeout(() => {botChat.innerHTML = "Have you achieve 80 credits?" }, 2000);; // if the user enters a unknown response
             }
-            setTimeout(() => {botChat.innerHTML = "Did you know warlocks have wisdom and charisma saving throws?" }, 2000);; // next question
+            setTimeout(() => {botChat.innerHTML = "Do you have UE - 14 credits in 3, level 3 subjects?" }, 2000);; // next question
             userInput.value = null;} // cleans the user input
 
-        while(botChat.textContent == "Did you know warlocks have wisdom and charisma saving throws?") {
+        while(botChat.textContent == "Do you have UE - 14 credits in 3, level 3 subjects?") {
         if (userInput.value == "yes") {
         botChat.innerHTML = "Excellent! well done.";
         userInput.value = null;}
@@ -55,23 +55,23 @@ function response() {
       
         else {
         botChat.textContent = "Please type yes or no.";
-                setTimeout(() => {botChat.innerHTML = "Did you know warlocks have wisdom and charisma saving throws?" }, 2000);;
+                setTimeout(() => {botChat.innerHTML = "Do you have UE - 14 credits in 3, level 3 subjects?" }, 2000);;
 
         userInput.value = null;}
         
-        setTimeout(() => {botChat.innerHTML = "Do you know any common patrons?" }, 2000);; // next question
+        setTimeout(() => {botChat.innerHTML = "Have you applied to any universties?" }, 2000);; // next question
         userInput.value = null;} // cleans the user input
         
-        while(botChat.textContent == "Do you know any common patrons?") {
+        while(botChat.textContent == "Have you applied to any universties?") {
             if (userInput.value == "yes") {
-                botChat.innerHTML = "I would love to have tenticles if I had a patrom. Thank you for using my Chatbot.";
+                botChat.innerHTML = "Sweet as, Good luck " + userInput.value + ". Im rooting for you :)";
                 userInput.value = null;}
             
                 else if (userInput.value == "no") {
-                botChat.textContent = "I would love to have the lurker of the dept to be my patreon, I would love to have tenticles. Thank you for using my Chatbot.";
+                botChat.textContent = "I think its best to talk to your teachs, family, and friends :)";
                 userInput.value = null;}
                 else {
                     botChat.textContent = "Please type yes or no.";
-                            setTimeout(() => {botChat.innerHTML = "Do you know any common patrons?" }, 2000);;
+                            setTimeout(() => {botChat.innerHTML = "Have you applied to any universties?" }, 2000);;
             
                     userInput.value = null;}}}
