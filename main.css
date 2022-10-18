@@ -5,16 +5,16 @@ button {
   cursor: pointer;
   outline: none;
   color: #fff;
-  background-color: #9fddd0;
+  background-color: #9fddb1;
   border: none;
   border-radius: 15px;
   box-shadow: 0 5px #999999;        }
 
-  button:hover {background-color: #9fddb1}
+  button:hover {background-color: #9fddd0}
 
   button:active {
   background-color:#ffffd7;
-  color: #171700;
+  color: #9fddb1;
   box-shadow: 0 2px #bfbfbf52;
   transform: translateY(4px);
   }
