@@ -42,7 +42,7 @@ function response() {
                 setTimeout(() => {botChat.innerHTML = "Are you feeling stressed about NCEA?" }, 2000);; // if the user enters a unknown response
             }
             setTimeout(() => {botChat.innerHTML = "Have you considered hwo much time each task will take?" }, 2000);; // next question
-            userInput.value = null;} // cleans the user input
+            userInput.value = null;} // cleans the user input 
 
         while(botChat.textContent == "Do you have UE - 14 credits in 3, level 3 subjects?") {
         if (userInput.value == "yes") {
