@@ -32,7 +32,7 @@ function response() {
         
         while(botChat.textContent == "Are you feeling stressed about NCEA?") {
             if (userInput.value == "yes") {
-                botChat.innerHTML = "Its okay" + user.innerHTML + " , got this." // response if the user says yes
+                botChat.innerHTML = "Its okay " + user.innerHTML + ", got this." // response if the user says yes
             }
             else if (userInput.value == "no") {
                 botChat.textContent = "Thats wonderful"; // if the user says no
@@ -64,7 +64,7 @@ function response() {
         
         while(botChat.textContent == "Are you balancing more work than required?") {
             if (userInput.value == "no") {
-                botChat.innerHTML = "Sweet as, Good luck " + user.innerHTML + ". Im rooting for you :)";
+                botChat.innerHTML = "Thats great " + user.innerHTML + ".";
                 userInput.value = null;} 
             
                 else if (userInput.value == "yes") {
@@ -74,4 +74,41 @@ function response() {
                     botChat.textContent = "Please type yes or no.";
                             setTimeout(() => {botChat.innerHTML = "Are you balancing more work than required?" }, 2000);;
             
-                    userInput.value = null;}}}
+                    userInput.value = null;}
+        
+         setTimeout(() => {botChat.innerHTML = "Are you balancing more work than required?" }, 2000);; // next question
+        userInput.value = null;} // cleans the user input
+        
+        while(botChat.textContent == "Are you balancing more work than required?") {
+            if (userInput.value == "no") {
+                botChat.innerHTML = "Thats great " + user.innerHTML + ".";
+                userInput.value = null;} 
+            
+                else if (userInput.value == "yes") {
+                botChat.textContent = "I think its best to talk to your teachers to reduce your workload to a managable amount!";
+                userInput.value = null;}
+                else {
+                    botChat.textContent = "Please type yes or no.";
+                            setTimeout(() => {botChat.innerHTML = "Are you balancing more work than required?" }, 2000);;
+            
+                    userInput.value = null;}
+        
+        setTimeout(() => {botChat.innerHTML = "Is there anything I didnt cover?" }, 2000);; // next question
+        userInput.value = null;} // cleans the user input
+                    
+        while(botChat.textContent == "Is there anything I didnt cover?") {
+            if (userInput.value == "no") {
+                botChat.innerHTML = "df ds j sdjfjsdhjbfjhb" //insert api advice here
+                userInput.value = null;} 
+                      
+            else if (userInput.value == "yes") {
+                botChat.textContent = "I think its best to talk to your teachers, family, and friends as they know how best to help :)";
+                setTimeout(() => {botChat.innerHTML = "Iewfjwbebfhjbewf" }, 2000);; //insert api advice here
+                userInput.value = null;}
+            else {
+            botChat.textContent = "Please type yes or no.";
+            setTimeout(() => {botChat.innerHTML = "Is there anything I didnt cover?" }, 2000);;
+                        
+            userInput.value = null;}}}               
+
+                    
