@@ -44,7 +44,7 @@ function response() {
             setTimeout(() => {botChat.innerHTML = "Have you considered hwo much time each task will take?" }, 2000);; // next question
             userInput.value = null;} // cleans the user input 
 
-        while(botChat.textContent == "Do you have UE - 14 credits in 3, level 3 subjects?") {
+        while(botChat.textContent == "Have you considered hwo much time each task will take?") {
         if (userInput.value == "yes") {
         botChat.innerHTML = "Thats great.";
         userInput.value = null;}
