@@ -65,7 +65,7 @@ function response() {
         while(botChat.textContent == "Are you balancing more work than required?") {
             if (userInput.value == "no") {
                 botChat.innerHTML = "Sweet as, Good luck " + user.innerHTML + ". Im rooting for you :)";
-                userInput.value = null;}
+                userInput.value = null;} 
             
                 else if (userInput.value == "yes") {
                 botChat.textContent = "I think its best to talk to your teachers to reduce your workload to a managable amount!";
