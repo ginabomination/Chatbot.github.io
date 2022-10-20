@@ -41,10 +41,10 @@ function response() {
                 botChat.textContent = "Please type yes or no.";
                 setTimeout(() => {botChat.innerHTML = "Are you feeling stressed about NCEA?" }, 2000);; // if the user enters a unknown response
             }
-            setTimeout(() => {botChat.innerHTML = "Have you considered hwo much time each task will take?" }, 2000);; // next question
+            setTimeout(() => {botChat.innerHTML = "Have you considered how much time each task will take?" }, 2000);; // next question
             userInput.value = null;} // cleans the user input 
 
-        while(botChat.textContent == "Have you considered hwo much time each task will take?") {
+        while(botChat.textContent == "Have you considered how much time each task will take?") {
         if (userInput.value == "yes") {
         botChat.innerHTML = "Thats great.";
         userInput.value = null;}
@@ -55,7 +55,7 @@ function response() {
       
         else {
         botChat.textContent = "Please type yes or no.";
-                setTimeout(() => {botChat.innerHTML = "Have you considered hwo much time each task will take?" }, 2000);;
+                setTimeout(() => {botChat.innerHTML = "Have you considered how much time each task will take?" }, 2000);;
 
         userInput.value = null;}
         
