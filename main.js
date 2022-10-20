@@ -3,7 +3,7 @@ var submit = document.querySelector("#submit");
 const botChat = document.querySelector("#botChat");
 const user = document.querySelector("#user");
 
-const greetingList = ["Hello", "Hi", "Hey there", "Yo"];
+const greetingList = ["Hello", "Hi", "Hey there"];
 const greeting = Math.floor(Math.random() * greetingList.length); // array for hellos
 
 alert("Dear user, please refrain from using capital letters. To answer a question use yes or no. Scroll up and down the page to change background. Thank you") // instructions for use
@@ -32,7 +32,7 @@ function response() {
         
         while(botChat.textContent == "Are you feeling stressed about NCEA?") {
             if (userInput.value == "yes") {
-                botChat.innerHTML = "Its okay you, got this. // response if the user says yes
+                botChat.innerHTML = "Its okay you, got this." // response if the user says yes
             }
             else if (userInput.value == "no") {
                 botChat.textContent = "Thats wonderful"; // if the user says no
@@ -68,7 +68,7 @@ function response() {
                 userInput.value = null;}
             
                 else if (userInput.value == "no") {
-                botChat.textContent = "I think its best to talk to your teachers to reduce your workload to a managable amount";
+                botChat.textContent = "I think its best to talk to your teachers to reduce your workload to a managable amount!";
                 userInput.value = null;}
                 else {
                     botChat.textContent = "Please type yes or no.";
