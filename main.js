@@ -75,7 +75,7 @@ function response() {
                             setTimeout(() => {botChat.innerHTML = "Are you balancing more work than required?" }, 2000);;
             
                     userInput.value = null;}
-        
+         
          setTimeout(() => {botChat.innerHTML = "Are you balancing more work than required?" }, 2000);; // next question
         userInput.value = null;} // cleans the user input
         
