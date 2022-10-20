@@ -26,11 +26,11 @@ function response() {
         while(botChat.textContent == "What is your name?") {
             botChat.innerHTML = greetingList[greeting] + " " + userInput.value;
             user.innerHTML = userInput.value;
-            setTimeout(() => {botChat.innerHTML = "Have you achieve 80 credits?" }, 2000);;
+            setTimeout(() => {botChat.innerHTML = "Are you feeling stressed about NCEA?" }, 2000);;
             userInput.value = null; // says hello to the user and asks the 2nd question
         } 
         
-        while(botChat.textContent == "Have you achieve 80 credits?") {
+        while(botChat.textContent == "Are you feeling stressed about NCEA?") {
             if (userInput.value == "yes") {
                 botChat.innerHTML = "Excellent!"; // response if the user says yes
             }
@@ -39,7 +39,7 @@ function response() {
             }
             else {
                 botChat.textContent = "Please type yes or no.";
-                setTimeout(() => {botChat.innerHTML = "Have you achieve 80 credits?" }, 2000);; // if the user enters a unknown response
+                setTimeout(() => {botChat.innerHTML = "Are you feeling stressed about NCEA?" }, 2000);; // if the user enters a unknown response
             }
             setTimeout(() => {botChat.innerHTML = "Do you have UE - 14 credits in 3, level 3 subjects?" }, 2000);; // next question
             userInput.value = null;} // cleans the user input
@@ -64,7 +64,7 @@ function response() {
         
         while(botChat.textContent == "Have you applied to any universties?") {
             if (userInput.value == "yes") {
-                botChat.innerHTML = "Sweet as, Good luck " + user.innerHTML.value + ". Im rooting for you :)";
+                botChat.innerHTML = "Sweet as, Good luck " + user.innerHTML + ". Im rooting for you :)";
                 userInput.value = null;}
             
                 else if (userInput.value == "no") {
