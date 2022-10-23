@@ -6,6 +6,7 @@ const user = document.querySelector("#user");
 function getadvice(){
     w3.getHttpObject("https://api.adviceslip.com/advice", function (data){
         advice=data.slip.advice
+        botChat.innerHTML = advice
 });}
 
 const greetingList = ["Hello", "Hi", "Hey there"];
@@ -107,7 +108,7 @@ function response() {
                 userInput.value = null;} 
             
                 else if (userInput.value == "yes") {
-                botChat.innerHTML = getadvice();
+                window.print = getadvice();
                 userInput.value = null;}
                 else {
                     botChat.textContent = "Please type yes or no.";
