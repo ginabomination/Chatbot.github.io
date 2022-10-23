@@ -3,13 +3,14 @@ var submit = document.querySelector("#submit");
 const botChat = document.querySelector("#botChat");
 const user = document.querySelector("#user");
 
+const yesNo = "Please answer yes or no."
+
 var question1 = "What is your name?"
-var question2 = ""
-var question3 = ""
-var question4 = ""
-var question5 = ""
-var question6 = ""
-var question7 = ""
+var question2 = "Are you feeling stressed about NCEA?"
+var question3 = "Have you considered how much time each task will take?" 
+var question4 = "Are you balancing more work than required?"
+var question5 = "Is there anything I didnt cover?"
+var question6 = "Advice from others can help you, did you want some?"
 // allows for easy question change
 
 function getadvice(){
@@ -39,11 +40,12 @@ function response() {
     while(botChat.textContent == question1) {
         botChat.innerHTML = greetingList[greeting] + " " + userInput.value;
         user.innerHTML = userInput.value;
-        setTimeout(() => {botChat.innerHTML = "Are you feeling stressed about NCEA?" }, 2000);;
+
+        setTimeout(() => {botChat.innerHTML = question2}, 2000);
         userInput.value = null; // says hello to the user and asks the 2nd question
     } 
         
-    while(botChat.textContent == "Are you feeling stressed about NCEA?") {
+    while(botChat.textContent == question2) {
         if (userInput.value == "yes") {
             botChat.innerHTML = "Its okay " + user.innerHTML + ", got this." // response if the user says yes
         }  
@@ -51,16 +53,16 @@ function response() {
             botChat.textContent = "Thats wonderful"; // if the user says no
         }
         else {
-            botChat.textContent = "Please type yes or no.";
-            setTimeout(() => {botChat.innerHTML = "Are you feeling stressed about NCEA?" }, 2000);; // if the user enters a unknown response
+            botChat.textContent = yesNo;
+            setTimeout(() => {botChat.innerHTML = question2}, 2000); // if the user enters a unknown response
         }
 
 
-    setTimeout(() => {botChat.innerHTML = "Have you considered how much time each task will take?" }, 2000);; // next question
+    setTimeout(() => {botChat.innerHTML = question3}, 2000); // next question
     userInput.value = null;} // cleans the user input 
 
 
-    while(botChat.textContent == "Have you considered how much time each task will take?") {
+    while(botChat.textContent == question3) {
         if (userInput.value == "yes") {
             botChat.innerHTML = "Thats great.";
             userInput.value = null;
@@ -72,17 +74,17 @@ function response() {
         }
       
         else {
-            botChat.textContent = "Please type yes or no.";
-            setTimeout(() => {botChat.innerHTML = "Have you considered how much time each task will take?" }, 2000);
+            botChat.textContent = yesNo;
+            setTimeout(() => {botChat.innerHTML = question3}, 2000);
             userInput.value = null;
         }
         
 
-        setTimeout(() => {botChat.innerHTML = "Are you balancing more work than required?" }, 2000);; // next question ontime offset
+        setTimeout(() => {botChat.innerHTML = question4 }, 2000); // next question ontime offset
         userInput.value = null;} // cleans the user input
 
         
-        while(botChat.textContent == "Are you balancing more work than required?") {
+        while(botChat.textContent == question4) {
             if (userInput.value == "no") {
                 botChat.innerHTML = "Thats great " + user.innerHTML + "."; // inserts users inputed name, addresses user personally
                 userInput.value = null;
@@ -94,17 +96,17 @@ function response() {
             }
 
             else {
-                botChat.textContent = "Please type yes or no.";
-                setTimeout(() => {botChat.innerHTML = "Are you balancing more work than required?" }, 2000);
+                botChat.textContent = yesNo;
+                setTimeout(() => {botChat.innerHTML = question4}, 2000);
                  userInput.value = null;
             }                         
         
 
-        setTimeout(() => {botChat.innerHTML = "Is there anything I didnt cover?" }, 2000); // next question
+        setTimeout(() => {botChat.innerHTML = question5 }, 2000); // next question
         userInput.value = null;} // cleans the user input
             
         
-        while(botChat.textContent == "Is there anything I didnt cover?") {
+        while(botChat.textContent == question5) {
             if (userInput.value == "no") {
                 botChat.innerHTML = "Thats wonderfull!"
                 userInput.value = null;
@@ -116,17 +118,17 @@ function response() {
             }
 
             else {
-                botChat.textContent = "Please type yes or no.";
-                setTimeout(() => {botChat.innerHTML = "Is there anything I didnt cover?" }, 2000);
+                botChat.textContent = yesNo;
+                setTimeout(() => {botChat.innerHTML = question5}, 2000);
                 userInput.value = null;
             }
 
 
-        setTimeout(() => {botChat.innerHTML = "Advice from others can help you, did you want some?" }, 2000);; // next question
+        setTimeout(() => {botChat.innerHTML = question6}, 2000); // next question
         userInput.value = null;} // cleans the user input
         
 
-        while(botChat.textContent == "Advice from others can help you, did you want some?") {
+        while(botChat.textContent == question6) {
             if (userInput.value == "no") {
                 botChat.innerHTML = "Thats alright " + user.innerHTML + ", Ill see you another time :)";
                 userInput.value = null;
@@ -140,13 +142,13 @@ function response() {
             }
 
             else {
-                botChat.textContent = "Please type yes or no.";
-                setTimeout(() => {botChat.innerHTML = "Advice from others can help you, did you want some?" }, 2000);;
+                botChat.textContent = yesNo;
+                setTimeout(() => {botChat.innerHTML = question6}, 2000);
                 userInput.value = null;
             }
 
 
-            setTimeout(() => {botChat.innerHTML = "Advice from others can help you, did you want some?" }, 2000);; // next question
+            setTimeout(() => {botChat.innerHTML = "Advice from others can help you, did you want some?" }, 2000); // next question
             userInput.value = null;} // cleans the user input  
          
         }        
