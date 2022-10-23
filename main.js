@@ -7,7 +7,7 @@ function getadvice(){
     w3.getHttpObject("https://api.adviceslip.com/advice", function (data){
         advice=data.slip.advice
         botChat.innerHTML = advice
-});}
+});} // connection to AdviceApi
 
 const greetingList = ["Hello", "Hi", "Hey there"];
 const greeting = Math.floor(Math.random() * greetingList.length); // array for hellos
@@ -16,7 +16,7 @@ submit.addEventListener("click", response); // submit button
 
 
 window.onload = function question () {
-    botChat.textContent = "What is your name?" // means that this question is the first question to show when the page is opened
+    botChat.textContent = "What is your name?" // establishes as question on window load
 }
 
 userInput.addEventListener("keyup", function(event) {
@@ -24,7 +24,7 @@ userInput.addEventListener("keyup", function(event) {
      event.preventDefault();
      document.getElementById("submit").click();
     }
-  }); // enter keycode, sourced from MDN
+  }); // enter keycode, sourced from MDN, allows the use of enter key
 
 function response() {
     while(botChat.textContent == "What is your name?") {
@@ -69,63 +69,77 @@ function response() {
         }
         
 
-        setTimeout(() => {botChat.innerHTML = "Are you balancing more work than required?" }, 2000);; // next question
+        setTimeout(() => {botChat.innerHTML = "Are you balancing more work than required?" }, 2000);; // next question ontime offset
         userInput.value = null;} // cleans the user input
 
         
         while(botChat.textContent == "Are you balancing more work than required?") {
             if (userInput.value == "no") {
-                botChat.innerHTML = "Thats great " + user.innerHTML + ".";
-                userInput.value = null;} 
+                botChat.innerHTML = "Thats great " + user.innerHTML + "."; // inserts users inputed name, addresses user personally
+                userInput.value = null;
+            } 
             
-                else if (userInput.value == "yes") {
+            else if (userInput.value == "yes") {
                 botChat.textContent = "I think its best to talk to your teachers to reduce your workload to a managable amount!";
-                userInput.value = null;}
-                else {
-                    botChat.textContent = "Please type yes or no.";
-                            setTimeout(() => {botChat.innerHTML = "Are you balancing more work than required?" }, 2000);;
-            
-                    userInput.value = null;}                         
+                userInput.value = null;
+            }
+
+            else {
+                botChat.textContent = "Please type yes or no.";
+                setTimeout(() => {botChat.innerHTML = "Are you balancing more work than required?" }, 2000);
+                 userInput.value = null;
+            }                         
         
-        setTimeout(() => {botChat.innerHTML = "Is there anything I didnt cover?" }, 2000);; // next question
+
+        setTimeout(() => {botChat.innerHTML = "Is there anything I didnt cover?" }, 2000); // next question
         userInput.value = null;} // cleans the user input
-                    
+            
+        
         while(botChat.textContent == "Is there anything I didnt cover?") {
             if (userInput.value == "no") {
-                botChat.innerHTML = "df ds j sdjfjsdhjbfjhb" //insert api advice here
-                userInput.value = null;} 
+                botChat.innerHTML = "Thats wonderfull!"
+                userInput.value = null;
+            } 
                       
             else if (userInput.value == "yes") {
                 botChat.textContent = "I think its best to talk to your teachers, family, and friends as they know how best to help :)";
-                userInput.value = null;}
+                userInput.value = null;
+            }
+
             else {
-            botChat.textContent = "Please type yes or no.";
-            setTimeout(() => {botChat.innerHTML = "Is there anything I didnt cover?" }, 2000);;
-            userInput.value = null;}
+                botChat.textContent = "Please type yes or no.";
+                setTimeout(() => {botChat.innerHTML = "Is there anything I didnt cover?" }, 2000);
+                userInput.value = null;
+            }
+
 
         setTimeout(() => {botChat.innerHTML = "Advice from others can help you, did you want some?" }, 2000);; // next question
         userInput.value = null;} // cleans the user input
         
+
         while(botChat.textContent == "Advice from others can help you, did you want some?") {
             if (userInput.value == "no") {
                 botChat.innerHTML = "Thats alright " + user.innerHTML + ", Ill see you another time :)";
-                userInput.value = null;} 
-            
-                else if (userInput.value == "yes") {
-                    setTimeout(1000);
-                window.print = getadvice();
                 userInput.value = null;
-                setTimeout(2000);}
-                else {
-                    botChat.textContent = "Please type yes or no.";
-                    setTimeout(() => {botChat.innerHTML = "Advice from others can help you, did you want some?" }, 2000);;
+            } 
             
-                    userInput.value = null;
+            else if (userInput.value == "yes") {
+                setTimeout(1000);
+                window.print = getadvice(); // prints the advice slip function
+                userInput.value = null;
+                setTimeout(2000);
+            }
 
-                    
-                    setTimeout(() => {botChat.innerHTML = "Advice from others can help you, did you want some?" }, 2000);; // next question
-                    userInput.value = null;} // cleans the user input  
+            else {
+                botChat.textContent = "Please type yes or no.";
+                setTimeout(() => {botChat.innerHTML = "Advice from others can help you, did you want some?" }, 2000);;
+                userInput.value = null;
+            }
+
+
+            setTimeout(() => {botChat.innerHTML = "Advice from others can help you, did you want some?" }, 2000);; // next question
+            userInput.value = null;} // cleans the user input  
          
-        }  }             
+        }        
 
                     
