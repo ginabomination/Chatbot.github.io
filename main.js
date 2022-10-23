@@ -112,7 +112,7 @@ function response() {
                 userInput.value = null;}
                 else {
                     botChat.textContent = "Please type yes or no.";
-                            setTimeout(() => {botChat.innerHTML = "Advice from others can help you, did you want some?" }, 2000);;
+                    setTimeout(() => {botChat.innerHTML = "Advice from others can help you, did you want some?" }, 2000);;
             
                     userInput.value = null;}
                     setTimeout(2000);
