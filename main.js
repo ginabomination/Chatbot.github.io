@@ -117,7 +117,7 @@ function response() {
                     userInput.value = null;}
                     setTimeout(2000);
                
-        
+         
         }  }             
 
                     
