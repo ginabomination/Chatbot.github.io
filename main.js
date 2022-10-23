@@ -92,7 +92,6 @@ function response() {
                       
             else if (userInput.value == "yes") {
                 botChat.textContent = "I think its best to talk to your teachers, family, and friends as they know how best to help :)";
-                setTimeout(() => {botChat.innerHTML = "Iewfjwbebfhjbewf" }, 2000);; //insert api advice here
                 userInput.value = null;}
             else {
             botChat.textContent = "Please type yes or no.";
@@ -108,15 +107,19 @@ function response() {
                 userInput.value = null;} 
             
                 else if (userInput.value == "yes") {
+                    setTimeout(1000);
                 window.print = getadvice();
-                userInput.value = null;}
+                userInput.value = null;
+                setTimeout(2000);}
                 else {
                     botChat.textContent = "Please type yes or no.";
                     setTimeout(() => {botChat.innerHTML = "Advice from others can help you, did you want some?" }, 2000);;
             
-                    userInput.value = null;}
-                    setTimeout(2000);
-               
+                    userInput.value = null;
+
+                    
+                    setTimeout(() => {botChat.innerHTML = "Advice from others can help you, did you want some?" }, 2000);; // next question
+                    userInput.value = null;} // cleans the user input  
          
         }  }             
 
