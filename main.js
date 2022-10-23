@@ -11,7 +11,7 @@ function getadvice(){
 const greetingList = ["Hello", "Hi", "Hey there"];
 const greeting = Math.floor(Math.random() * greetingList.length); // array for hellos
 
-alert("Dear user, please refrain from using capital letters. To answer a question use yes or no. Scroll up and down the page to change background. Thank you") // instructions for use
+alert("To answer a question use yes or no. Thank you") // instructions for use
 
 submit.addEventListener("click", response); // submit button
 
@@ -98,10 +98,10 @@ function response() {
             setTimeout(() => {botChat.innerHTML = "Is there anything I didnt cover?" }, 2000);;
             userInput.value = null;}
 
-        setTimeout(() => {botChat.innerHTML = "Adivce from others can help you, did you want some?" }, 2000);; // next question
+        setTimeout(() => {botChat.innerHTML = "Advice from others can help you, did you want some?" }, 2000);; // next question
         userInput.value = null;} // cleans the user input
         
-        while(botChat.textContent == "Adivce from others can help you, did you want some?") {
+        while(botChat.textContent == "Advice from others can help you, did you want some?") {
             if (userInput.value == "no") {
                 botChat.innerHTML = "Thats alright " + user.innerHTML + ", Ill see you another time :)";
                 userInput.value = null;} 
@@ -111,7 +111,7 @@ function response() {
                 userInput.value = null;}
                 else {
                     botChat.textContent = "Please type yes or no.";
-                            setTimeout(() => {botChat.innerHTML = "Adivce from others can help you, did you want some?" }, 2000);;
+                            setTimeout(() => {botChat.innerHTML = "Advice from others can help you, did you want some?" }, 2000);;
             
                     userInput.value = null;}
                
