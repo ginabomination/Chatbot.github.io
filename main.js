@@ -3,6 +3,11 @@ var submit = document.querySelector("#submit");
 const botChat = document.querySelector("#botChat");
 const user = document.querySelector("#user");
 
+function getadvice(){
+    w3.getHttpObject("https://api.adviceslip.com/advice", function (data){
+        advice=data.slip.advice
+});}
+
 const greetingList = ["Hello", "Hi", "Hey there"];
 const greeting = Math.floor(Math.random() * greetingList.length); // array for hellos
 
@@ -76,7 +81,7 @@ function response() {
             
                     userInput.value = null;}
          
-         setTimeout(() => {botChat.innerHTML = "Are you balancing more work than required?" }, 2000);; // next question
+        setTimeout(() => {botChat.innerHTML = "Are you balancing more work than required?" }, 2000);; // next question
         userInput.value = null;} // cleans the user input
         
         while(botChat.textContent == "Are you balancing more work than required?") {
@@ -109,6 +114,26 @@ function response() {
             botChat.textContent = "Please type yes or no.";
             setTimeout(() => {botChat.innerHTML = "Is there anything I didnt cover?" }, 2000);;
                         
-            userInput.value = null;}}}               
+            userInput.value = null;}}
+
+            setTimeout(() => {botChat.innerHTML = "Adivce from others can help you, did you want some?" }, 2000);; // next question
+        userInput.value = null;} // cleans the user input
+        
+        while(botChat.textContent == "Adivce from others can help you, did you want some?") {
+            if (userInput.value == "no") {
+                botChat.innerHTML = "Thats alright " + user.innerHTML + ", Ill see you another time :)";
+                userInput.value = null;} 
+            
+                else if (userInput.value == "yes") {
+                botChat.textContent = advice;
+                userInput.value = null;}
+                else {
+                    botChat.textContent = "Please type yes or no.";
+                            setTimeout(() => {botChat.innerHTML = "Adivce from others can help you, did you want some?" }, 2000);;
+            
+                    userInput.value = null;}
+               
+        
+        }               
 
                     
