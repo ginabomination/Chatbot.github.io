@@ -96,10 +96,9 @@ function response() {
             else {
             botChat.textContent = "Please type yes or no.";
             setTimeout(() => {botChat.innerHTML = "Is there anything I didnt cover?" }, 2000);;
-                        
-            userInput.value = null;} 
+            userInput.value = null;}
 
-            setTimeout(() => {botChat.innerHTML = "Adivce from others can help you, did you want some?" }, 2000);; // next question
+        setTimeout(() => {botChat.innerHTML = "Adivce from others can help you, did you want some?" }, 2000);; // next question
         userInput.value = null;} // cleans the user input
         
         while(botChat.textContent == "Adivce from others can help you, did you want some?") {
