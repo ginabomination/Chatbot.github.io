@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<script src="https://www.w3schools.com/lib/w3.js"></script>
+<script>
+    function getadvice(){
+        w3.getHttpObject("https://api.adviceslip.com/advice", function (data){
+            advice=data.slip.advice
+            alert(advice)
+    });}
+</script>
+<button onclick="getadvice()">hvvhvhv</button>
