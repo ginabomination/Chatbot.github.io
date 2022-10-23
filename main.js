@@ -79,24 +79,7 @@ function response() {
                     botChat.textContent = "Please type yes or no.";
                             setTimeout(() => {botChat.innerHTML = "Are you balancing more work than required?" }, 2000);;
             
-                    userInput.value = null;}
-         
-        setTimeout(() => {botChat.innerHTML = "Are you balancing more work than required?" }, 2000);; // next question
-        userInput.value = null;} // cleans the user input
-        
-        while(botChat.textContent == "Are you balancing more work than required?") {
-            if (userInput.value == "no") {
-                botChat.innerHTML = "Thats great " + user.innerHTML + ".";
-                userInput.value = null;} 
-            
-                else if (userInput.value == "yes") {
-                botChat.textContent = "I think its best to talk to your teachers to reduce your workload to a managable amount!";
-                userInput.value = null;}
-                else {
-                    botChat.textContent = "Please type yes or no.";
-                            setTimeout(() => {botChat.innerHTML = "Are you balancing more work than required?" }, 2000);;
-            
-                    userInput.value = null;}
+                    userInput.value = null;}                         
         
         setTimeout(() => {botChat.innerHTML = "Is there anything I didnt cover?" }, 2000);; // next question
         userInput.value = null;} // cleans the user input
