@@ -3,6 +3,15 @@ var submit = document.querySelector("#submit");
 const botChat = document.querySelector("#botChat");
 const user = document.querySelector("#user");
 
+var question1 = "What is your name?"
+var question2 = ""
+var question3 = ""
+var question4 = ""
+var question5 = ""
+var question6 = ""
+var question7 = ""
+// allows for easy question change
+
 function getadvice(){
     w3.getHttpObject("https://api.adviceslip.com/advice", function (data){
         advice=data.slip.advice
@@ -14,11 +23,6 @@ const greeting = Math.floor(Math.random() * greetingList.length); // array for h
 
 submit.addEventListener("click", response); // submit button
 
-
-window.onload = function question () {
-    botChat.textContent = "What is your name?" // establishes as question on window load
-}
-
 userInput.addEventListener("keyup", function(event) {
     if (event.keyCode === 13) {
      event.preventDefault();
@@ -26,8 +30,13 @@ userInput.addEventListener("keyup", function(event) {
     }
   }); // enter keycode, sourced from MDN, allows the use of enter key
 
+
+window.onload = function question () {
+    botChat.textContent = question1; // establishes as question on window load
+}  
+
 function response() {
-    while(botChat.textContent == "What is your name?") {
+    while(botChat.textContent == question1) {
         botChat.innerHTML = greetingList[greeting] + " " + userInput.value;
         user.innerHTML = userInput.value;
         setTimeout(() => {botChat.innerHTML = "Are you feeling stressed about NCEA?" }, 2000);;
