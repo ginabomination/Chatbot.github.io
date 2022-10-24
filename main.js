@@ -138,7 +138,7 @@ function response() {
                 setTimeout(1000);
                 window.print = getadvice(); // prints the advice slip function
                 userInput.value = null;
-                setTimeout(2000);
+                setTimeout(4000);
             }
 
             else {
